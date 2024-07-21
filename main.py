@@ -20,7 +20,7 @@ def main(page:ft.Page):
         content = ft.Text(value='Liturgia'),
         visible=True
     )
-    Oracoes = ft.Container(
+    oracoes = ft.Container(
         content = ft.Text(value='Orações'),
         visible=False
     )
@@ -37,8 +37,40 @@ def main(page:ft.Page):
         visible=False
     )
     #mostrar telas
-    def show_calendario():
-        pass
+    def show_liturgia(e):
+        liturgia.visible = True
+        oracoes.visible = False
+        devocoesCarismas.visible = False
+        calendario.visible = False
+        contatos.visible = False
+        
+    def show_oracoes(e):
+        liturgia.visible = False
+        oracoes.visible = True
+        devocoesCarismas.visible = False
+        calendario.visible = False
+        contatos.visible = False
+    
+    def show_oracoes(e):
+        liturgia.visible = False
+        oracoes.visible = False
+        devocoesCarismas.visible = True
+        calendario.visible = False
+        contatos.visible = False
+        
+    def show_oracoes(e):
+        liturgia.visible = False
+        oracoes.visible = False
+        devocoesCarismas.visible = False
+        calendario.visible = True
+        contatos.visible = False
+    
+    def show_oracoes(e):
+        liturgia.visible = False
+        oracoes.visible = False
+        devocoesCarismas.visible = False
+        calendario.visible = False
+        contatos.visible = True    
 
     #Cabeçalho
     header = ft.Container(
@@ -87,7 +119,7 @@ def main(page:ft.Page):
         content= ft.Column(
             controls=[
             liturgia,
-            Oracoes,
+            oracoes,
             devocoesCarismas,
             calendario,
             contatos
