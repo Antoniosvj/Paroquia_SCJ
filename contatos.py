@@ -1,9 +1,9 @@
 import flet as ft
 
-def pagina_liturgia():
+def pagina_contatos():
     return ft.Container(
         content= ft.Text(
-            value='Liturgia'
+            value='contatos'
         ),
-        visible=True
+        visible=False
     )

@@ -1,5 +1,6 @@
 import flet as ft
 import time
+from liturgia import pagina_liturgia 
 
 def main(page:ft.Page):
     
@@ -17,7 +18,10 @@ def main(page:ft.Page):
 
     #controles
     liturgia = ft.Container(
-        content = ft.Text(value='Liturgia'),
+        content = ft.Container(
+            #carregarconteudo liturgia
+            ft.Text(value='Liturgia'),
+        ),
         visible=True
     )
     oracoes = ft.Container(
@@ -43,6 +47,8 @@ def main(page:ft.Page):
         devocoesCarismas.visible = False
         calendario.visible = False
         contatos.visible = False
+        page.update()
+
         
     def show_oracoes(e):
         liturgia.visible = False
@@ -50,6 +56,7 @@ def main(page:ft.Page):
         devocoesCarismas.visible = False
         calendario.visible = False
         contatos.visible = False
+        page.update()
     
     def show_devocoes_carismas(e):
         liturgia.visible = False
@@ -57,6 +64,7 @@ def main(page:ft.Page):
         devocoesCarismas.visible = True
         calendario.visible = False
         contatos.visible = False
+        page.update()
         
     def show_calendario(e):
         liturgia.visible = False
@@ -64,13 +72,15 @@ def main(page:ft.Page):
         devocoesCarismas.visible = False
         calendario.visible = True
         contatos.visible = False
+        page.update()
     
     def show_contatos(e):
         liturgia.visible = False
         oracoes.visible = False
         devocoesCarismas.visible = False
         calendario.visible = False
-        contatos.visible = True    
+        contatos.visible = True
+        page.update()    
 
     #Cabeçalho
     header = ft.Container(
@@ -124,7 +134,7 @@ def main(page:ft.Page):
     
     #parte principal
     main_content = ft.Container(
-        width=350,
+        width=520,
         margin=ft.margin.all(15),
         content= ft.Column(
             controls=[
@@ -177,7 +187,7 @@ def main(page:ft.Page):
     )
     
     layout = ft.Container(
-        width=900,
+        width=520,
         margin=ft.margin.all(30),
         content= ft.Column(
             controls=[
