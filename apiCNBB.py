@@ -9,7 +9,7 @@ liturgia = requests.get('https://liturgiadiaria.site/') #liturgia do dia
 #liturgia = requests.get(f"https://liturgiadiaria.site/?dia={dia}&mes={mes}") #liturgia do dia especifico
 
 liturgia = liturgia.json()
-print(liturgia)
+#print(liturgia)
 
 data = liturgia['data']
 print(data)

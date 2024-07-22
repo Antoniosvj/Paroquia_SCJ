@@ -5,14 +5,14 @@ def main(page:ft.Page):
     
     #layout abertura
     image_layout = ft.Container(
-        width=900,
+        width=350,
         margin=ft.margin.all(30),
         content= ft.Image(
             src='icon.png',
             width=100,
         )
     )
-#    page.add(image_layout)
+    #page.add(image_layout)
     time.sleep(3)
 
     #controles
@@ -51,21 +51,21 @@ def main(page:ft.Page):
         calendario.visible = False
         contatos.visible = False
     
-    def show_oracoes(e):
+    def show_devocoes_carismas(e):
         liturgia.visible = False
         oracoes.visible = False
         devocoesCarismas.visible = True
         calendario.visible = False
         contatos.visible = False
         
-    def show_oracoes(e):
+    def show_calendario(e):
         liturgia.visible = False
         oracoes.visible = False
         devocoesCarismas.visible = False
         calendario.visible = True
         contatos.visible = False
     
-    def show_oracoes(e):
+    def show_contatos(e):
         liturgia.visible = False
         oracoes.visible = False
         devocoesCarismas.visible = False
@@ -87,26 +87,36 @@ def main(page:ft.Page):
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
             alignment='spaceBetween',
             controls=[
-                ft.Text(
+                ft.TextButton(
                     col=4,
-                    value='Liturgia',
-                    color= '#ffffff',
-                    size=12,
-                    text_align=ft.TextAlign.CENTER,
+                    on_click=show_liturgia,
+                    content = ft.Text(
+                        value='Liturgia',
+                        color= '#ffffff',
+                        size=12,
+                        text_align=ft.TextAlign.CENTER,
                     ),
-                ft.Text(
+                ),
+                ft.TextButton(
                     col=4,
-                    value='Orações',
-                    color= '#ffffff',
-                    size=12,
-                    text_align=ft.TextAlign.CENTER,
+                    on_click=show_oracoes,
+                    content = ft.Text(
+                        value="Orações",
+                        color="#ffffff",
+                        size=12,
+                        text_align=ft.TextAlign.CENTER,
                     ),
-                ft.Text(
+                ),
+                ft.TextButton(
                     col=4,
-                    value='Devoções\ne Carismas',
-                    color= '#ffffff',
-                    size=12,
-                    text_align=ft.TextAlign.CENTER,
+                    on_click=show_devocoes_carismas,
+                    content = ft.Text(
+                        value='Devoção\ne Carisma',
+                        color='#ffffff',
+                        size=12,
+                        text_align=ft.TextAlign.CENTER,
+                    ),
+                    
                     )
             ]
         )
@@ -114,7 +124,7 @@ def main(page:ft.Page):
     
     #parte principal
     main_content = ft.Container(
-        width=900,
+        width=350,
         margin=ft.margin.all(15),
         content= ft.Column(
             controls=[
@@ -142,20 +152,26 @@ def main(page:ft.Page):
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
             alignment='spaceBetween',
             controls=[
-                ft.Text(
+                ft.TextButton(
                     col=6,
-                    value='Calendário',
-                    color= '#ffffff',
-                    size=12,
-                    text_align=ft.TextAlign.CENTER,
+                    on_click=show_calendario,
+                    content = ft.Text(
+                        value='Calendário',
+                        color= '#ffffff',
+                        size=12,
+                        text_align=ft.TextAlign.CENTER,
                     ),
-                ft.Text(
+                ),
+                ft.TextButton(
                     col=6,
-                    value='Contatos Úteis',
-                    color= '#ffffff',
-                    size=12,
-                    text_align=ft.TextAlign.CENTER,
-                    ),
+                    on_click=show_contatos,
+                    content = ft.Text(
+                        value='Contatos',
+                        color= '#ffffff',
+                        size=12,
+                        text_align=ft.TextAlign.CENTER,
+                        ),
+                ),
             ]
         )
     )
