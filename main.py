@@ -7,10 +7,10 @@ def main(page: ft.Page):
     image_layout = ft.Container(
         width=350,
         margin=ft.margin.all(30),
-        content=ft.Image(
-            src='assets/icon.png',
-            width=100,
-        )
+        content= ft.Image(
+            src='assets/logo.png',
+            width=350,
+            ),
     )
     page.add(image_layout)
     time.sleep(3)

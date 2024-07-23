@@ -4,6 +4,7 @@ from handlers import show_liturgia, show_oracoes, show_devocoes_carismas, show_c
 
 def create_layout(page):
     return ft.Container(
+        
         width=520,
         margin=ft.margin.all(15),
         content=ft.Column(
