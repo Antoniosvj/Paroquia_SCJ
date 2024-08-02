@@ -162,3 +162,5 @@ cython_debug/
 
 CasodeUso.png
 ProjetoIgreja.asta
+build
+.idea

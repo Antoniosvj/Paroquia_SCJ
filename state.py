@@ -10,3 +10,4 @@ oracoes = create_oracoes()
 devocoes_carismas = create_devocoes_carismas()
 calendario = create_calendario()
 contatos = create_contatos()
+
