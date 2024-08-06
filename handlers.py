@@ -1,41 +1,33 @@
 from state import liturgia, oracoes, devocoes_carismas, calendario, contatos
 
+def hide_all():
+    liturgia.hide()
+    oracoes.hide()
+    devocoes_carismas.hide()
+    calendario.hide()
+    contatos.hide()
+
 def show_liturgia(page):
-    liturgia.visible = True
-    oracoes.visible = False
-    devocoes_carismas.visible = False
-    calendario.visible = False
-    contatos.visible = False
+    hide_all()
+    liturgia.show()
     page.update()
 
 def show_oracoes(page):
-    liturgia.visible = False
-    oracoes.visible = True
-    devocoes_carismas.visible = False
-    calendario.visible = False
-    contatos.visible = False
+    hide_all()
+    oracoes.show()
     page.update()
 
 def show_devocoes_carismas(page):
-    liturgia.visible = False
-    oracoes.visible = False
-    devocoes_carismas.visible = True
-    calendario.visible = False
-    contatos.visible = False
+    hide_all()
+    devocoes_carismas.show()
     page.update()
 
 def show_calendario(page):
-    liturgia.visible = False
-    oracoes.visible = False
-    devocoes_carismas.visible = False
-    calendario.visible = True
-    contatos.visible = False
+    hide_all()
+    calendario.show()
     page.update()
 
 def show_contatos(page):
-    liturgia.visible = False
-    oracoes.visible = False
-    devocoes_carismas.visible = False
-    calendario.visible = False
-    contatos.visible = True
+    hide_all()
+    contatos.show()
     page.update()

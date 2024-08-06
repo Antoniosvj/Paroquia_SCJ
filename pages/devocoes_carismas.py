@@ -1,29 +1,28 @@
 import flet as ft
+from styles import CustomButtom, TextTitulo
 
-BGCOLOR = ft.colors.GREY_100
-TEXT_COLOR = '#D82622'
+def SCJesus():
+    print("Clicou no Sagrado Coração de Jesus")
 
-def create_devocoes_carismas():
-    return ft.Container(
-        content= ft.Column([
-            ft.Text(
-                value='Devoções e Carismas',
-                size=24,
-                color=TEXT_COLOR,
-                weight=ft.FontWeight.W_900,
-            ),
-            ft.ElevatedButton(
-                text='Sagrado Coração de Jesus',
-                color=TEXT_COLOR,
-                bgcolor=BGCOLOR,
-                style=ft.ButtonStyle(side=ft.BorderSide(1, TEXT_COLOR))
-            ),
-            ft.ElevatedButton(
-                text='Santo do Dia',
-                color=TEXT_COLOR,
-                bgcolor=BGCOLOR,
-                style=ft.ButtonStyle(side=ft.BorderSide(1, TEXT_COLOR))
-            ),
-        ]),
-        visible=False
-    )
+def SantoDia():
+    print("Clicou no Santo do Dia")
+
+class DevocoesCarismasPage:
+    def __init__(self):
+        self.container = ft.Container(
+            content=ft.Column([
+                TextTitulo.create('Devoções e Carismas'),
+                CustomButtom.create('Sagrado Coração de Jesus', SCJesus),
+                CustomButtom.create('Santo do Dia', SantoDia),
+            ]),
+            visible=False
+        )
+    
+    def show(self):
+        self.container.visible = True
+
+    def hide(self):
+        self.container.visible = False
+
+    def get_container(self):
+        return self.container

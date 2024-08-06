@@ -1,0 +1,57 @@
+{
+    "SLourenco": {
+    "titulo": "Oração de São Lourenço",
+    "oracao": "Ó doce Jesus, modelo de caridade cristã, fazei crescer em nós o espírito de piedade, o desejo de salvação. Dai-nos a saúde da alma e do corpo, nos livre da inveja, Dai-nos forças para querer bem a quem nos quer bem e também a quem nos quer ou nos faz mal.\nAssim, mereçamos imitar o vosso fiel servo, o glorioso Mártir São Lourenço. Que por seus martírios aqui na terra possamos reinar com ele e convosco no céu e para sempre. Amém\nÓ glorisos Mártir São Lourenço. \nRogai por nós e por nosso município."
+    },
+    "STerco": {
+        "titulo": "Terço",
+        "inicio": "Em nome do Pai, do Filho e do Espírito Santo. Amém!\n(reza-se a oração do Creio e do Pai-Nosso, três Ave-Marias e o Glória ao Pai)",
+        "final": "Finaliza-se o Santo Terço com a Oração da Salve-Rainha.",
+        "contemplacoes":[
+            {
+                "misterio": "Gozosos",
+                "dia": "segunda-feira e sabado",
+                "contemplacao": "1º mistério: Anunciação do anjo a Maria;\n2º mistério: Visitação de Maria a Santa Isabel;\n3º mistério: Nascimento do Menino Deus;\n4º mistério: Apresentação de Jesus no Templo;\n5º mistério: Perda e encontro de Jesus." 
+            },
+            {
+                "misterio": "Dolorosos",
+                "dia": "terça-feira e sexta-feira",
+                "contemplacao": "1º mistério: Oração e agonia de Jesus no Getsémani;\n2º mistério: Flagelação de Cristo;\n3º mistério: A coroação de espinhos;\n4º mistério: A subida ao Calvário;\n5º mistério: A morte na cruz."
+            },
+            {
+                "misterio": "Gloriosos",
+                "dia": "quarta-feira, domingo",
+                "contemplacao": "1º mistério: Ressurreição do Senhor;\n2º mistério: A ascensão de Jesus;\n3º mistério: Pentecostes - A vinda do Espírito sobre Maria e os apóstolos;\n4º mistério: Maria assunta aos céus;\n5º mistério: Maria coroada Rainha dos anjos e dos santos."
+            },
+            {
+                "misterio": "Luminosos",
+                "dia": "quinta-feira",
+                "contemplacao": "1º mistério: Batismo de Jesus no Jordão;\n2º mistério: Milagre de Jesus nas bodas de Caná;\n3º mistério: Anúncio do Reino de Deus com um convite à conversão;\n4º mistério: Transfiguração do Senhor;\n5º mistério: Instituição da Eucaristia."
+            }
+        ]        
+    },
+    "Creio": {
+        "titulo": "Creio",
+        "oracao": "Creio em Deus Pai Todo-Poderoso, criador do céu e da terra, e em Jesus Cristo, Seu único Filho Nosso Senhor, que foi concebido pelo poder do Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado; desceu à mansão dos mortos, ressuscitou ao terceiro dia, subiu aos céus, está sentado à direita de Deus Pai Todo-Poderoso, donde há de vir a julgar os vivos e mortos. Creio no Espírito Santo, na Santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne e na vida eterna. Amém."
+    },
+    "Pai-Nosso": {
+        "titulo": "Pai-Nosso",
+        "oracao": "Pai nosso que estais nos céus, santificado seja o Vosso nome, venha a nós o Vosso reino, seja feita a Vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje, e perdoai-nos as nossas ofensas assim como nós perdoamos a quem nos tem ofendido. Não nos deixeis cair em tentação, mas nos livrai do mal. Amém."
+    },
+    "Ave-Maria":{
+        "titulo": "Ave-Maria",
+        "oracao": "Ave-Maria, cheia de graça, o Senhor é convosco, e bendita sois vós entre as mulheres. Bendito é o Fruto do vosso ventre, Jesus. Santa Maria Mãe de Deus, rogai por nós, os pecadores, agora e na hora de nossa morte. Amém."
+    },
+    "Gloria":{
+        "titulo": "Glória ao Pai",
+        "oracao": "Glória ao Pai, ao Filho e ao Espírito Santo. Assim como era no princípio, agora e sempre, e por todos os séculos dos séculos. Amém."
+    },
+    "Salve-Rainha":{
+        "titulo":"Salve-Rainha",
+        "oracao":"Salve Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos os degradados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia pois advogada nossa, esses vossos olhos misericordiosos a nós volvei. E depois deste desterro, mostrai-nos Jesus, bendito fruto de vosso ventre. Ó clemente! Ó piedosa! Ó doce sempre Virgem Maria! Rogai por nós Santa Mãe de Deus, para que sejamos dignos das promessas de Cristo. Amém."
+    },
+    "SMiguel": {
+        "titulo": "Oração de São Miguel Arcanjo",
+        "oracao": "São Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e as ciladas do demônio.\n Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pela virtude divina, precipitai no inferno a satanás e a todos os espíritos malignos, que andam pelo mundo para perder as almas."
+    }
+}

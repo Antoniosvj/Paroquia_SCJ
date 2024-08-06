@@ -1,13 +1,12 @@
-from pages.liturgia import create_liturgia
-from pages.oracoes import create_oracoes
-from pages.devocoes_carismas import create_devocoes_carismas
-from pages.calendario import create_calendario
-from pages.contatos import create_contatos
+from pages.liturgia import LiturgiaPage
+from pages.oracoes import OracoesPage
+from pages.devocoes_carismas import DevocoesCarismasPage
+from pages.calendario import CalendarioPage
+from pages.contatos import ContatosPage
 
-# Containers globais para manter o estado
-liturgia = create_liturgia()
-oracoes = create_oracoes()
-devocoes_carismas = create_devocoes_carismas()
-calendario = create_calendario()
-contatos = create_contatos()
-
+# Instâncias globais das classes das páginas
+liturgia = LiturgiaPage()
+oracoes = OracoesPage()
+devocoes_carismas = DevocoesCarismasPage()
+calendario = CalendarioPage()
+contatos = ContatosPage()

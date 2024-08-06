@@ -1,9 +1,8 @@
-# A projeto-extensao-matriz Flet app
+# Liturgia PSCJ
 
-An example of a minimal Flet app.
+Este projeto esta sendo realizado como extensão da minha faculdade de ciência da computação.
 
-To run the app:
+## Consumo de API
 
-```
-flet run [app_directory]
-```
+Para conseguir trazer a liturgia do dia estou utilizando a api do site
+https://liturgiadiaria.site/

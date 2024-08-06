@@ -1,10 +1,10 @@
 import flet as ft
 from state import liturgia, oracoes, devocoes_carismas, calendario, contatos
 from handlers import show_liturgia, show_oracoes, show_devocoes_carismas, show_calendario, show_contatos
+from styles import CustomButtonNav
 import time
 
 BGCOLOR_BAR = ft.colors.BLACK
-COLORTEXT_BAR = ft.colors.WHITE
 
 def main(page: ft.Page):
     page.bgcolor = ft.colors.GREY_200
@@ -29,28 +29,9 @@ def main(page: ft.Page):
     page.appbar = ft.AppBar(
         bgcolor=BGCOLOR_BAR,
         actions=[
-            ft.TextButton(
-                text='Liturgia',
-                style=ft.ButtonStyle(
-                    color=COLORTEXT_BAR,
-                ),
-                on_click=lambda _: show_liturgia(page)
-            ),
-            ft.TextButton(
-                text='Orações',
-                style=ft.ButtonStyle(
-                    color=COLORTEXT_BAR,
-                ),
-                on_click=lambda _: show_oracoes(page),
-
-            ),
-            ft.TextButton(
-                text='Devoções e Carismas',
-                style=ft.ButtonStyle(
-                    color=COLORTEXT_BAR,
-                ),
-                on_click=lambda _: show_devocoes_carismas(page),
-            ),
+            CustomButtonNav.create('Liturgia', lambda _: show_liturgia(page)),
+            CustomButtonNav.create('Orações', lambda _: show_oracoes(page)),
+            CustomButtonNav.create('Devoções e Carismas', lambda _: show_devocoes_carismas(page)),
         ]
     )
     
@@ -58,21 +39,9 @@ def main(page: ft.Page):
         bgcolor=BGCOLOR_BAR,
         content=ft.Row(
             controls=[
-                ft.TextButton(
-                    text='Calendário',
-                    style=ft.ButtonStyle(
-                        color=COLORTEXT_BAR,
-                    ),
-                    on_click=lambda _: show_calendario(page),
-                ),
+                CustomButtonNav.create('Calendário', lambda _: show_calendario(page)),
                 ft.Container(expand=True),
-                ft.TextButton(
-                    text='Contatos',
-                    style=ft.ButtonStyle(
-                        color=COLORTEXT_BAR,
-                    ),
-                    on_click=lambda _: show_contatos(page),
-                ),
+                CustomButtonNav.create('Contatos', lambda _: show_contatos(page)),
             ]
         )
     )
@@ -83,11 +52,11 @@ def main(page: ft.Page):
         margin=ft.margin.all(30),
         content=ft.Column(
             controls=[
-                liturgia,
-                oracoes,
-                devocoes_carismas,
-                calendario,
-                contatos
+                liturgia.get_container(),
+                oracoes.get_container(),
+                devocoes_carismas.get_container(),
+                calendario.get_container(),
+                contatos.get_container()
             ]
         )      
     )

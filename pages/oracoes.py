@@ -1,36 +1,50 @@
 import flet as ft
+import json
+from styles import CustomButtom, TextTitulo, TextOracoes
 
-BGCOLOR = ft.colors.GREY_100
-TEXT_COLOR = '#D82622'
+class OracoesPage:
+    def __init__(self):
+        with open('oracoes.json', 'r', encoding='utf-8') as f:
+            self.oracoes = json.load(f)
+        self.container = ft.Container(
+            content=ft.Column([
+                TextTitulo.create('Orações'),
+                CustomButtom.create(self.oracoes['SLourenco']['titulo'], on_click=self.show_Slourenco),
+                CustomButtom.create('Oração do Santo Terço', on_click=self.show_Sterco),
+                CustomButtom.create(self.oracoes['SMiguel']['titulo'], on_click=self.show_SMiguel),
+                
+            ]),
+            visible=False,
+        )
+        
+    def show_Slourenco(self, e):
+        self.container.content.controls = [
+            TextTitulo.create(self.oracoes['SLourenco']['titulo']),
+            TextOracoes.create(self.oracoes['SLourenco']['oracao']),
+            CustomButtom.create('Voltar', on_click=self.show_oracoes_page)
+        ]
+        e.control.page.update()
+        
+    def show_SMiguel(self, e):
+        self.container.content.controls = [
+            TextTitulo.create(self.oracoes['SMiguel']['titulo']),
+            TextOracoes.create(self.oracoes['SMiguel']['oracao']),
+            CustomButtom.create('Voltar', on_click=self.show_oracoes_page)
+        ]
+        e.control.page.update()
 
-#orações
-def oracaoSLourenco():
-    pass
+        
+    def show_Sterco(self, e):
+        ...
+     
+    def show_oracoes_page(self, e):
+        ...
+       
+    def show(self):
+        self.container.visible = True
 
-def create_oracoes():
-    return ft.Container(
-        content=ft.Column([
-            ft.Text(
-                value='Orações',
-                size=24,
-                color=TEXT_COLOR,
-                weight=ft.FontWeight.W_900,
-            ),
-            ft.ElevatedButton(
-                text='Oração a São Lourenço',
-                color=TEXT_COLOR,
-                bgcolor=BGCOLOR,
-                style=ft.ButtonStyle(side=ft.BorderSide(1, TEXT_COLOR)),
-                on_click= oracaoSLourenco,
-            ),
-            ft.ElevatedButton(
-                text='Santo Terço',
-                color=TEXT_COLOR,
-                bgcolor=BGCOLOR,
-                style=ft.ButtonStyle(side=ft.BorderSide(1, TEXT_COLOR))
+    def hide(self):
+        self.container.visible = False
 
-            ),
-        ]),
-        visible=False,
-    )
-
+    def get_container(self):
+        return self.container
