@@ -39,12 +39,14 @@ class LiturgiaPage:
         tabs.append(
             ft.Tab(
                 text='1ª Leitura',
-                content=ft.Container(
-                    padding=ft.padding.all(10),
-                    content=ft.Text(
-                        value=f"{primeira_leitura['titulo']} ({primeira_leitura['referencia']})\n{primeira_leitura['texto']}",
-                        color=TEXT_COLOR,
-                    ),
+                content=ft.Column(
+                    controls=[
+                        ft.Text(
+                            value=f"{primeira_leitura['titulo']} ({primeira_leitura['referencia']})\n{primeira_leitura['texto']}",
+                            color=TEXT_COLOR,
+                        ),
+                    ],
+                    scroll=ft.ScrollMode.AUTO
                 ),
             )
         )
@@ -53,12 +55,15 @@ class LiturgiaPage:
             ft.Tab(
                 text='Salmo',
                 adaptive=True,
-                content=ft.Container(
-                    padding=ft.padding.all(10),
-                    content=ft.Text(
-                        value=f"{salmo['referencia']}\nRefrão: {salmo['refrao']}\n{salmo['texto']}",
-                        color=TEXT_COLOR,
-                    ),
+                content=ft.Column(
+                    controls=[
+                        ft.Text(
+                            value=f"{salmo['referencia']}\nRefrão: {salmo['refrao']}\n{salmo['texto']}",
+                            color=TEXT_COLOR,
+                        ),
+                    ],
+                    scroll=ft.ScrollMode.AUTO
+
                 ),
             )
         )
@@ -67,12 +72,14 @@ class LiturgiaPage:
             tabs.append(
                 ft.Tab(
                     text='2ª Leitura',
-                    content=ft.Container(
-                        padding=ft.padding.all(10),
-                        content=ft.Text(
-                            value=f"{segunda_leitura['titulo']} ({segunda_leitura['referencia']})\n{segunda_leitura['texto']}",
-                            color=TEXT_COLOR,
-                        ),
+                    content=ft.Column(
+                        controls=[
+                            ft.Text(
+                                value=f"{segunda_leitura['titulo']} ({segunda_leitura['referencia']})\n{segunda_leitura['texto']}",
+                                color=TEXT_COLOR,
+                            ),
+                        ],
+                        scroll=ft.ScrollMode.AUTO
                     ),
                 )
             )
@@ -80,12 +87,15 @@ class LiturgiaPage:
         tabs.append(
             ft.Tab(
                 text='Evangelho',
-                content=ft.Container(
-                    padding=ft.padding.all(10),
-                    content=ft.Text(
-                        value=f"{evangelho['titulo']} ({evangelho['referencia']})\n{evangelho['texto']}",
-                        color=TEXT_COLOR,
-                    ),
+                content=ft.Column(
+                    controls=[
+                        ft.Text(
+                            value=f"{evangelho['titulo']} ({evangelho['referencia']})\n{evangelho['texto']}",
+                            color=TEXT_COLOR,
+                        ),
+                        ],
+                    scroll=ft.ScrollMode.AUTO
+
                 ),
             )
         )

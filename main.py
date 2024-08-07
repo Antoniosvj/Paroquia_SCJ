@@ -9,11 +9,13 @@ BGCOLOR_BAR = ft.colors.BLACK
 def main(page: ft.Page):
     page.bgcolor = ft.colors.GREY_200
     page.adaptive = True
+    page.auto_scroll
+    page.window_width=520
     
     # Layout inicial
     image_layout = ft.Container(
         width=350,
-        margin=ft.margin.all(30),
+        margin=ft.margin.all(15),
         bgcolor= ft.colors.WHITE,
         expand=True,
         content= ft.Image(
@@ -49,7 +51,7 @@ def main(page: ft.Page):
     # Adicionar layout completo à página
     layout = ft.Container(
         width=520,
-        margin=ft.margin.all(30),
+        margin=ft.margin.all(15),
         content=ft.Column(
             controls=[
                 liturgia.get_container(),

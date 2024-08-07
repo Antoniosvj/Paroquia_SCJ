@@ -4,31 +4,32 @@
     "oracao": "Ó doce Jesus, modelo de caridade cristã, fazei crescer em nós o espírito de piedade, o desejo de salvação. Dai-nos a saúde da alma e do corpo, nos livre da inveja, Dai-nos forças para querer bem a quem nos quer bem e também a quem nos quer ou nos faz mal.\nAssim, mereçamos imitar o vosso fiel servo, o glorioso Mártir São Lourenço. Que por seus martírios aqui na terra possamos reinar com ele e convosco no céu e para sempre. Amém\nÓ glorisos Mártir São Lourenço. \nRogai por nós e por nosso município."
     },
     "STerco": {
-        "titulo": "Terço",
+        "titulo": "Santo Terço",
         "inicio": "Em nome do Pai, do Filho e do Espírito Santo. Amém!\n(reza-se a oração do Creio e do Pai-Nosso, três Ave-Marias e o Glória ao Pai)",
+        "misterios": "Reza-se em cada misterio 1 Pai Nosso e 10 Ave-Maria",
         "final": "Finaliza-se o Santo Terço com a Oração da Salve-Rainha.",
-        "contemplacoes":[
-            {
+        "contemplacoes":{
+            "misteriosGozosos": {
                 "misterio": "Gozosos",
                 "dia": "segunda-feira e sabado",
                 "contemplacao": "1º mistério: Anunciação do anjo a Maria;\n2º mistério: Visitação de Maria a Santa Isabel;\n3º mistério: Nascimento do Menino Deus;\n4º mistério: Apresentação de Jesus no Templo;\n5º mistério: Perda e encontro de Jesus." 
             },
-            {
+            "misteriosDolorosos":{
                 "misterio": "Dolorosos",
                 "dia": "terça-feira e sexta-feira",
                 "contemplacao": "1º mistério: Oração e agonia de Jesus no Getsémani;\n2º mistério: Flagelação de Cristo;\n3º mistério: A coroação de espinhos;\n4º mistério: A subida ao Calvário;\n5º mistério: A morte na cruz."
             },
-            {
+            "misteriorGloriosos":{
                 "misterio": "Gloriosos",
                 "dia": "quarta-feira, domingo",
                 "contemplacao": "1º mistério: Ressurreição do Senhor;\n2º mistério: A ascensão de Jesus;\n3º mistério: Pentecostes - A vinda do Espírito sobre Maria e os apóstolos;\n4º mistério: Maria assunta aos céus;\n5º mistério: Maria coroada Rainha dos anjos e dos santos."
             },
-            {
+            "misteriosLuminosos":{
                 "misterio": "Luminosos",
                 "dia": "quinta-feira",
                 "contemplacao": "1º mistério: Batismo de Jesus no Jordão;\n2º mistério: Milagre de Jesus nas bodas de Caná;\n3º mistério: Anúncio do Reino de Deus com um convite à conversão;\n4º mistério: Transfiguração do Senhor;\n5º mistério: Instituição da Eucaristia."
             }
-        ]        
+        }        
     },
     "Creio": {
         "titulo": "Creio",
@@ -53,5 +54,10 @@
     "SMiguel": {
         "titulo": "Oração de São Miguel Arcanjo",
         "oracao": "São Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e as ciladas do demônio.\n Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pela virtude divina, precipitai no inferno a satanás e a todos os espíritos malignos, que andam pelo mundo para perder as almas."
+    },
+    "Apostolado":{
+        "titulo": "Oração do Apostolado da Oração",
+        "oracao": "Deus, nosso Pai, eu te ofereço todo o dia de hoje: minhas orações e obras, meus pensamentos e palavras, minhas alegrias e sofrimentos, em reparação de nossas ofensas, em união com o Coração de teu Filho, Jesus, que continua a oferecer-se a Ti, na Eucaristia, pela salvação do mundo.\nQue o Espírito Santo, que guiou a Jesus, seja meu guia e meu amparo neste dia para que eu possa ser testemunhas do teu amor: Com Maria, Mãe de Jesus e da Igreja, rezo especialmente pelas intenções do Santo Padre para este mês…"
     }
+
 }
